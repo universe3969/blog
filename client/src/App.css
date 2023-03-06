@@ -1,0 +1,60 @@
+.app-container {
+  background-color: #205543;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23205543' cx='50' cy='0' r='50'/%3E%3Cg fill='%23225d49' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%2325644f' cx='50' cy='100' r='50'/%3E%3Cg fill='%23276c55' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%2329745b' cx='50' cy='200' r='50'/%3E%3Cg fill='%232c7c62' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%232e8468' cx='50' cy='300' r='50'/%3E%3Cg fill='%23318d6f' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23339575' cx='50' cy='400' r='50'/%3E%3Cg fill='%23359d7c' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%2338a682' cx='50' cy='500' r='50'/%3E%3Cg fill='%233aae89' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%233cb790' cx='50' cy='600' r='50'/%3E%3Cg fill='%233fc097' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%2341c99e' cx='50' cy='700' r='50'/%3E%3Cg fill='%2343d2a5' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%2346dbac' cx='50' cy='800' r='50'/%3E%3Cg fill='%2348e4b3' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%234aedba' cx='50' cy='900' r='50'/%3E%3Cg fill='%234df6c1' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%234FFFC8' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+.app {
+  position: relative;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(50% - 10px), 1fr));
+  grid-gap: 20px;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  right: -300px;
+}
+
+.header {
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+/* .posts-component {
+  width: 100%;
+  margin-bottom: 20px;
+} */
+
+/* @media (min-width: 768px) {
+  .app-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .posts-component {
+    width: 50%;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+} */
