@@ -6,6 +6,7 @@ import './Form.css';
 
 
 export default function Form ({currentId, setCurrentId}) {
+  const dispatch = useDispatch();
 
   const initialFormData = {
     creator: '',
@@ -16,12 +17,7 @@ export default function Form ({currentId, setCurrentId}) {
   };
   const [postData, setPostData] = useState(initialFormData);
   const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null);
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (post) setPostData(post);
-
-  }, [post])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -48,6 +44,10 @@ export default function Form ({currentId, setCurrentId}) {
     setPostData(initialFormData);
   };
 
+  useEffect(() => {
+    if (post) setPostData(post);
+
+  }, [post]);
 
   return (
     <div className="form-container">

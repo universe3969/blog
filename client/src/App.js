@@ -11,10 +11,12 @@ import Form from './components/Form/Form';
 export default function App () {
   const dispatch = useDispatch();
   const [currentId, setCurrentId] = useState(null);
-  useEffect(() => {
-    dispatch(getPosts());
-  }, [currentId, dispatch]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(getPosts());
+    }, 500);
+  }, [currentId, dispatch]);
 
   return (
     <div className="app-container">
